@@ -1,16 +1,16 @@
 import React from 'react'
-import Ini1 from "./Ini-1/Ini-1";
-import Boss1Config from './Ini-1/Boss1Config.json'
+import Dungeon from './dungeonComponent/DungeonComponent';
+
+import "./main.css"
 
 
 class HealbotSite extends React.Component {
 
-    constructor(props) {
+    constructor(props:any) {
         super(props)
         this.state = {
         }
     }
-    TotalRaiders = Object.values(Boss1Config.raiders).reduce((a, b) => a + b)
 
     render() {
         return (
@@ -24,8 +24,7 @@ class HealbotSite extends React.Component {
                 <div className="raid-area">
                     <div className="raid">
 
-                        <Ini1></Ini1>
-                        {this.TotalRaiders}
+                        <Dungeon/>
 
                         <div className="clearer">
                         </div>

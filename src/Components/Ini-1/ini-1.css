@@ -6,7 +6,7 @@ div.boss1 {
 }
 .boss1 .boss-area {
     width: 100%;
-    height: 100px;
+    height: 1000px;
     margin: 0 auto;
     border: 1px solid gray-dark;
     background-color:rgba(0, 0, 0, 0.5);
