@@ -40,7 +40,7 @@ class Raider extends React.Component<IRaiderProps, any> {
 
                     <div className="dead">
                         <div className="dead_text"><i>DEAD</i></div>
-                        <img src="../img/skull.png" alt={"skull"}></img>
+                        <img src="../img/skull.png" alt="skull"></img>
                     </div>
                     <div className="current_life_bar"></div>
                     <div className="incoming_heal"></div>
