@@ -6,14 +6,14 @@ import "./Raider.css"
 
 interface IRaiderProps {
     identifier: string,
-    role: string
+    classRole: string
 }
 
 class Raider extends React.Component<IRaiderProps, any> {
 
     id = "r" + this.props.identifier //TODO check if i can do this differntly
-    className = "raider " + this.props.role
-    roleIcon = this.props.role + "RoleIcon"
+    className = "raider " + this.props.classRole
+    roleIcon = this.props.classRole + "RoleIcon"
 
 
     // constructor(props){
@@ -22,10 +22,10 @@ class Raider extends React.Component<IRaiderProps, any> {
 
     render() {
         let source: any
-        if (this.props.role === "tank") {
+        if (this.props.classRole === "tank") {
             source = tank
         }
-        else if (this.props.role === "dps") {
+        else if (this.props.classRole === "dps") {
             source = dps
         }
         else {
@@ -34,13 +34,13 @@ class Raider extends React.Component<IRaiderProps, any> {
 
         return (
             <div id={this.id} className={this.className} >
-                <img className={this.roleIcon} src={source} alt={this.props.role}></img>
+                <img className={this.roleIcon} src={source} alt={this.props.classRole}></img>
                 <div className="current_life_text_wrapper">
                     <div className="current_life_text">100%</div>
 
                     <div className="dead">
                         <div className="dead_text"><i>DEAD</i></div>
-                        <img src="../img/skull.png"></img>
+                        <img src="../img/skull.png" alt={"skull"}></img>
                     </div>
                     <div className="current_life_bar"></div>
                     <div className="incoming_heal"></div>

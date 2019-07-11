@@ -18,17 +18,17 @@ export default class Dungeon extends React.Component {
         for (let i = 0; i < this.TotalRaiders; i++) {
             if (i < Boss1Config.raiders.total_tanks) {
                 Raiders.push(
-                    <Raider key={i} identifier={i.toFixed()} role={"tank"} ></Raider>
+                    <Raider key={i} identifier={i.toFixed()} classRole={"tank"} ></Raider>
                 )
             }
             else if (i < Boss1Config.raiders.total_tanks + Boss1Config.raiders.total_dps) {
                 Raiders.push(
-                    <Raider key={i} identifier={i.toFixed()} role={"dps"} ></Raider>
+                    <Raider key={i} identifier={i.toFixed()} classRole={"dps"} ></Raider>
                 )
             }
             else {
                 Raiders.push(
-                    <Raider key={i} identifier={i.toFixed()} role={"healer"} ></Raider>
+                    <Raider key={i} identifier={i.toFixed()} classRole={"healer"} ></Raider>
                 )
             }
         }
