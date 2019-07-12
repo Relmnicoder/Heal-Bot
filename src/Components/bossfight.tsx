@@ -1,5 +1,6 @@
 import React from 'react'
 import Raidframes from './raidframesComponent/RaidframesComponent';
+import Castbar from './castbarComponent/CastbarComponent';
 
 import "./main.css"
 
@@ -35,6 +36,7 @@ class BossfightSite extends React.Component {
                     </div>
                 </div>
                 <div className="castbar_area">
+                    <Castbar/>
                     <div className="castbar">
                     </div>
                 </div>
