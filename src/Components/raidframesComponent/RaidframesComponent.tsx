@@ -10,12 +10,12 @@ import "../main.css"
 
 export default class Raidframes extends React.Component {
 
-    TotalRaiders = Object.values(Boss1Config.raiders).reduce((a, b) => a + b)
+    totalRaiders = Object.values(Boss1Config.raiders).reduce((a, b) => a + b)
 
 
     render() {
         let Raiders = []
-        for (let i = 0; i < this.TotalRaiders; i++) {
+        for (let i = 0; i < this.totalRaiders; i++) {
             if (i < Boss1Config.raiders.total_tanks) {
                 Raiders.push(
                     <Raider key={i} identifier={i.toFixed()} classRole={"tank"} ></Raider>

@@ -37,14 +37,14 @@ class Raider extends React.Component<IRaiderProps, any> {
                 <img className={this.roleIcon} src={source} alt={this.props.classRole}></img>
                 <div className="current_life_text_wrapper">
                     <div className="current_life_text">100%</div>
-
+                    {/* death display */}
                     <div className="dead">
                         <div className="dead_text"><i>DEAD</i></div>
                         <img src="../img/skull.png" alt="skull"></img>
                     </div>
-                    <div className="current_life_bar"></div>
-                    <div className="incoming_heal"></div>
                 </div>
+                <div className="current_life_bar"></div>
+                <div className="incoming_heal"></div>
             </div>
 
         )
