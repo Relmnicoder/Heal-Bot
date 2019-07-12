@@ -1,0 +1,17 @@
+.manabar {
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width:772px;
+    margin: 0 auto;
+    border: 1px solid gray;
+    position: relative;
+    height: 40px;
+}
+.current_mana_bar {
+    background-color: blue;
+    width: 95%;
+    height:100%;
+    position: absolute;
+}
+.mana_numbers {
+    position: absolute;
+}

@@ -14,10 +14,11 @@ class Manabar extends React.Component {
 
     render() {
         return (
-            <div className="manabar_background" >
+            <div className="manabar">
                 <div className="current_mana_bar"></div>
-                <div className="mana_current_amount">Test</div>
-                <div className="mana_max_amount">1.5s</div>
+                <div className="mana_numbers">
+                    95 / 100
+                </div>
             </div>
         )
     }

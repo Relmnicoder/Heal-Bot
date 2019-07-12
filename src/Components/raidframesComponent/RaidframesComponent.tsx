@@ -35,6 +35,7 @@ export default class Raidframes extends React.Component {
         return (
             <div id="ini-1">
                 {Raiders}
+                <div className="clearer"></div>
             </div>
         )
     }
