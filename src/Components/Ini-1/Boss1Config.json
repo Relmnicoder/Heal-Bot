@@ -2,8 +2,8 @@
     "iniName": "Ini-1",
     "bossName": "Boss-1",
     "raiders": {
-        "total_tanks": 1,
-        "total_dps": 3,
-        "total_healers": 1
+        "total_tanks": 2,
+        "total_dps": 5,
+        "total_healers": 3
     }
 }
