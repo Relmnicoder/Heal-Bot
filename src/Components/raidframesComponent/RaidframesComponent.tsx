@@ -8,7 +8,7 @@ import "../main.css"
 
 //This can just be the Ini component. So like classes, all Inis would use this as a basis, and just use the Config.Json file to do stuff. 
 
-export default class Dungeon extends React.Component {
+export default class Raidframes extends React.Component {
 
     TotalRaiders = Object.values(Boss1Config.raiders).reduce((a, b) => a + b)
 

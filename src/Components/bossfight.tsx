@@ -4,7 +4,7 @@ import Raidframes from './raidframesComponent/RaidframesComponent';
 import "./main.css"
 
 
-class HealbotSite extends React.Component {
+class BossfightSite extends React.Component {
 
     constructor(props:any) {
         super(props)
@@ -46,4 +46,4 @@ class HealbotSite extends React.Component {
     }
 }
 
-export default HealbotSite
+export default BossfightSite
