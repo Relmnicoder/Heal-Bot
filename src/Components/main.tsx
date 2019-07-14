@@ -1,5 +1,6 @@
 import React from 'react'
 import Raidframes from './raidframesComponent/RaidframesComponent';
+import Enemies from './enemiesComponent/EnemiesComponent';
 import Castbar from './castbarComponent/CastbarComponent';
 import Manabar from './manabarComponent/ManabarComponent';
 
@@ -19,10 +20,7 @@ class HealbotSite extends React.Component {
             <div className="encounter">
                 <div className="top-area">
                     <div className="boss-area">
-                        <div className="boss b1">
-                            <div className="current_life">
-                            </div>
-                        </div>
+                        <Enemies/>
                     </div>
                 </div>
                 <div className="middle-area">
