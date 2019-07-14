@@ -1,0 +1,57 @@
+.bosses {
+    margin: 0 auto;
+    border: 1px solid gray;
+    max-width:772px;
+    display: flex;
+}
+.boss {
+    height: 75px;
+    width: 100%;
+    margin: 2px;
+    float: left;
+    background-color: red;
+    position: relative;
+}
+.current_life_bar {
+    background-color:#555555;
+    height: 100%;
+    width: 100%;
+    float: left;
+}
+.current_life_text_wrapper {
+    position: absolute;
+    left: 50%;
+}
+.current_life_text {
+    position: relative;
+    left: -50%;
+    font-size: 26px;
+    top: 25px;
+    color: whitesmoke;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.dead {
+    display: none;
+    position: relative;
+    left: -50%;
+}
+.dead_text {
+    position: relative;
+    font-size: 26px;
+    top: 10px;
+    color: whitesmoke;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    background-image: url(../../../img/skull.png);
+}
+.dead img {
+    top: 15px;
+    height: 35px;
+    left: 15px;
+    position: relative;
+}
+.elite_frame {
+    position: absolute;
+    left: -45px;
+    height: 110px;
+    top: -10px;
+}
