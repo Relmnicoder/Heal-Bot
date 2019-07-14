@@ -17,7 +17,7 @@ class Manabar extends React.Component {
             <div className="manabar">
                 <div className="current_mana_bar"></div>
                 <div className="mana_numbers">
-                    95 / 100
+                    95%
                 </div>
             </div>
         )
