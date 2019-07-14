@@ -1,7 +1,7 @@
 import React from 'react'
-import tank from '../../img/tank.png'
-import dps from '../../img/dps.png'
-import healer from '../../img/healer.png'
+import tank from '../../../img/tank.png'
+import dps from '../../../img/dps.png'
+import healer from '../../../img/healer.png'
 import "./raider.css"
 
 interface IRaiderProps {
@@ -40,7 +40,7 @@ class Raider extends React.Component<IRaiderProps, any> {
                     {/* death display */}
                     <div className="dead">
                         <div className="dead_text"><i>DEAD</i></div>
-                        <img src="../img/skull.png" alt="skull"></img>
+                        <img src="../../../img/skull.png" alt="skull"></img>
                     </div>
                 </div>
                 <div className="current_life_bar"></div>

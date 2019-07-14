@@ -1,5 +1,5 @@
 import React from 'react'
-import Raider from '../raiderComponent/RaiderComponent'
+import Raider from './raiderComponent/RaiderComponent'
 import Boss1Config from '../Ini-1/Boss1Config.json'
 
 import "../Ini-1/ini-1.css"
