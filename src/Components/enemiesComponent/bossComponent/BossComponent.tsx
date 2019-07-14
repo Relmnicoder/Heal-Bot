@@ -1,5 +1,5 @@
 import React from 'react'
-import eliteFrame from '../../../img/eliteFrame.png'
+// import eliteFrame from '../../../img/eliteFrame.png'
 import skull from '../../../img/skull.png'
 
 import "./boss.css"
@@ -20,7 +20,7 @@ class Boss extends React.Component<IRaiderProps, any> {
     render() {
         return (
             <div id={this.id} className="boss">
-                <img src={eliteFrame} alt="eliteFrame" className="elite_frame"></img>
+                {/*<img src={eliteFrame} alt="eliteFrame" className="elite_frame"></img>*/}
                 <div className="current_life_text_wrapper">
                     <div className="current_life_text">100%</div>
                     {/* death display */}
