@@ -3,6 +3,8 @@ import Raidframes from './raidframesComponent/RaidframesComponent';
 import Enemies from './enemiesComponent/EnemiesComponent';
 import Castbar from './castbarComponent/CastbarComponent';
 import Manabar from './manabarComponent/ManabarComponent';
+import Timers from './timerComponent/TimerComponent';
+import Cooldowns from './cooldownsComponent/CooldownsComponent';
 
 import "./InstanceComponent.css"
 
@@ -35,9 +37,13 @@ class HealbotSite extends React.Component {
                     <div className="manabar_area">
                         <Manabar/>
                     </div>
+                    <div className="timer_area">
+                        <Timers/>
+                    </div>
                 </div>
                 <div className="bottom-area">
                     <div className="cd_area">
+                        <Cooldowns/>
                     </div>
                 </div>  
             </div>
