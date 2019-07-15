@@ -4,10 +4,6 @@ import Boss1Config from '../Ini-1/Boss1Config.json'
 
 import "./enemies.css"
 
-/*interface IRaiderProps {
-    identifier: string,
-    classRole: string
-}*/
 
 class Enemies extends React.Component {
 

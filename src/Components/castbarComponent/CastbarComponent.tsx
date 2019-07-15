@@ -1,10 +1,6 @@
 import React from 'react'
 import "./castbar.css"
 
-/*interface IRaiderProps {
-    identifier: string,
-    classRole: string
-}*/
 
 class Castbar extends React.Component {
 
