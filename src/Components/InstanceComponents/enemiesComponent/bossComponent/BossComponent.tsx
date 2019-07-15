@@ -1,6 +1,6 @@
 import React from 'react'
 // import eliteFrame from '../../../img/eliteFrame.png'
-import skull from '../../../img/skull.png'
+import skull from '../../../../img/skull.png'
 
 import "./boss.css"
 

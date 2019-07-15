@@ -1,9 +1,9 @@
 import React from 'react'
 import Raider from './raiderComponent/RaiderComponent'
-import Boss1Config from '../Ini-1/Boss1Config.json'
+import Boss1Config from '../../../Instances/Ini-1/Boss1Config.json'
 
-import "../Ini-1/ini-1.css"
-import "../main.css"
+import "../../../Instances/Ini-1/ini-1.css"
+import "../../../Components/InstanceComponents/InstanceComponent.css"
 
 
 //This can just be the Ini component. So like classes, all Inis would use this as a basis, and just use the Config.Json file to do stuff. 

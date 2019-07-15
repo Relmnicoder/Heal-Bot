@@ -1,5 +1,5 @@
 import React from 'react';
-import HealBotSite from './Components/main'
+import HealBotSite from './Components/InstanceComponents/InstanceComponent'
 
 const App: React.FC = () => {
   return (

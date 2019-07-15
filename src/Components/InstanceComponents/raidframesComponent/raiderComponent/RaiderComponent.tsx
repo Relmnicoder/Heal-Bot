@@ -1,8 +1,8 @@
 import React from 'react'
-import tank from '../../../img/tank.png'
-import dps from '../../../img/dps.png'
-import healer from '../../../img/healer.png'
-import skull from '../../../img/skull.png'
+import tank from '../../../../img/tank.png'
+import dps from '../../../../img/dps.png'
+import healer from '../../../../img/healer.png'
+import skull from '../../../../img/skull.png'
 import "./raider.css"
 
 interface IRaiderProps {
