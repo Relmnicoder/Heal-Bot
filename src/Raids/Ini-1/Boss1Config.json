@@ -1,0 +1,13 @@
+{
+    "iniName": "Ini-1",
+    "bossName": "Boss-1",
+    "enemies": {
+        "boss": 1,
+        "adds": 0
+    },
+    "raiders": {
+        "total_tanks": 2,
+        "total_dps": 5,
+        "total_healers": 3
+    }
+}
