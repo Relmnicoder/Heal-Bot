@@ -1,11 +1,6 @@
 import React from 'react'
 import "./manabar.css"
 
-/*interface IRaiderProps {
-    identifier: string,
-    classRole: string
-}*/
-
 class Manabar extends React.Component {
 
     // constructor(props){
