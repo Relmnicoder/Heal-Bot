@@ -9,9 +9,9 @@ import Cooldowns from './cooldownsComponent/CooldownsComponent';
 import "./RaidComponent.css"
 
 
-class HealbotSite extends React.Component {
+class RaidComponent extends React.Component {
 
-    constructor(props:any) {
+    constructor(props: any) {
         super(props)
         this.state = {
         }
@@ -22,33 +22,33 @@ class HealbotSite extends React.Component {
             <div className="encounter">
                 <div className="top-area">
                     <div className="boss-area">
-                        <Enemies/>
+                        <Enemies />
                     </div>
                 </div>
                 <div className="middle-area">
                     <div className="raid-area">
                         <div className="raid">
-                            <Raidframes/>
+                            <Raidframes />
                         </div>
                     </div>
                     <div className="castbar_area">
-                        <Castbar/>
+                        <Castbar />
                     </div>
                     <div className="manabar_area">
-                        <Manabar/>
+                        <Manabar />
                     </div>
                     <div className="timer_area">
-                        <Timers/>
+                        <Timers />
                     </div>
                 </div>
                 <div className="bottom-area">
                     <div className="cd_area">
-                        <Cooldowns/>
+                        <Cooldowns />
                     </div>
-                </div>  
+                </div>
             </div>
         )
     }
 }
 
-export default HealbotSite
+export default RaidComponent
