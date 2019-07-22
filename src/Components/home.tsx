@@ -6,11 +6,6 @@ import "./home.css"
 
 
 class home extends React.Component {
-    // constructor(props: any) {
-    //     super(props)
-    //     this.state = {
-    //     }
-    // }
 
     render() {
         return (

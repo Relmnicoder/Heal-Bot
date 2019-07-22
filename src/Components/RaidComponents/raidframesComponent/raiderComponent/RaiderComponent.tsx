@@ -5,51 +5,49 @@ import healer from '../../../../img/healer.png'
 import skull from '../../../../img/skull.png'
 import "./raider.css"
 
+// import { RaidContext } from '../../RaidStore'
+
 interface IRaiderProps {
-    identifier: string,
-    classRole: string
+    identifier: number,
+    classRole: string,
+    alive: boolean
 }
 
-class Raider extends React.Component<IRaiderProps, any> {
-
-    id = "r" + this.props.identifier //TODO check if i can do this differntly
-    className = "raider " + this.props.classRole
-    roleIcon = this.props.classRole + "RoleIcon"
 
 
-    // constructor(props){
-    //     super(props)
-    // }
+export default function Raider(props: IRaiderProps) {
+    const id = "r" + props.identifier //TODO check if i can do this differntly
+    const className = "raider " + props.classRole
+    const roleIcon = props.classRole + "RoleIcon"
 
-    render() {
-        let source: any
-        if (this.props.classRole === "tank") {
-            source = tank
-        }
-        else if (this.props.classRole === "dps") {
-            source = dps
-        }
-        else {
-            source = healer
-        }
-
-        return (
-            <div id={this.id} className={this.className} >
-                <img className={this.roleIcon} src={source} alt={this.props.classRole}></img>
-                <div className="current_life_text_wrapper">
-                    <div className="current_life_text">100%</div>
-                    {/* death display */}
-                    <div className="dead">
-                        <div className="dead_text"><i>DEAD</i></div>
-                        <img src={skull} alt="skull"></img>
-                    </div>
-                </div>
-                <div className="current_life_bar"></div>
-                <div className="incoming_heal"></div>
-            </div>
-
-        )
+    let source: string
+    if (props.classRole === "tank") {
+        source = tank
     }
-}
+    else if (props.classRole === "dps") {
+        source = dps
+    }
+    else {
+        source = healer
+    }
 
-export default Raider
+    return (
+        <div id={id} className={className} >
+            <img className={roleIcon} src={source} alt={props.classRole}></img>
+            <div className="current_life_text_wrapper">
+                {
+                    props.alive ?
+                        <div className="current_life_text">100</div>
+                        :
+                        <div className="dead">
+                            <div className="dead_text"><i>DEAD</i></div>
+                            <img src={skull} alt="skull"></img>
+                        </div>
+                }
+            </div>
+            <div className="current_life_bar"></div>
+            <div className="incoming_heal"></div>
+        </div>
+
+    )
+}

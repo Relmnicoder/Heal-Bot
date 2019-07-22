@@ -6,8 +6,10 @@ import Manabar from './manabarComponent/ManabarComponent';
 import Timers from './timerComponent/TimerComponent';
 import Cooldowns from './cooldownsComponent/CooldownsComponent';
 
-import "./RaidComponent.css"
+import "./RaidComponent.css";
 
+import RaidStore from "./RaidStore";
+// import { Spell1 } from './SpellComponents/SpellComponent';
 
 class RaidComponent extends React.Component {
 
@@ -19,34 +21,37 @@ class RaidComponent extends React.Component {
 
     render() {
         return (
-            <div className="encounter">
-                <div className="top-area">
-                    <div className="boss-area">
-                        <Enemies />
-                    </div>
-                </div>
-                <div className="middle-area">
-                    <div className="raid-area">
-                        <div className="raid">
-                            <Raidframes />
+            <RaidStore>
+                <div className="encounter">
+                    <div className="top-area">
+                        <div className="boss-area">
+                            <Enemies />
                         </div>
                     </div>
-                    <div className="castbar_area">
-                        <Castbar />
+                    <div className="middle-area">
+                        <div className="raid-area">
+                            <div className="raid">
+                                <Raidframes />
+                            </div>
+                        </div>
+                        <div className="castbar_area">
+                            <Castbar />
+                        </div>
+                        <div className="manabar_area">
+                            <Manabar />
+                        </div>
+                        <div className="timer_area">
+                            <Timers />
+                        </div>
                     </div>
-                    <div className="manabar_area">
-                        <Manabar />
+                    <div className="bottom-area">
+                        <div className="cd_area">
+                            <Cooldowns />
+                        </div>
                     </div>
-                    <div className="timer_area">
-                        <Timers />
-                    </div>
+                    {/* <button onClick={Spell1}></button> */}
                 </div>
-                <div className="bottom-area">
-                    <div className="cd_area">
-                        <Cooldowns />
-                    </div>
-                </div>
-            </div>
+            </RaidStore>
         )
     }
 }
