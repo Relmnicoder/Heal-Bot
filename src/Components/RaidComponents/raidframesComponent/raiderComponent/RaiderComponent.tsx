@@ -5,7 +5,6 @@ import healer from '../../../../img/healer.png'
 import skull from '../../../../img/skull.png'
 import "./raider.css"
 
-// import { RaidContext } from '../../RaidStore'
 
 interface IRaiderProps {
     identifier: number,
