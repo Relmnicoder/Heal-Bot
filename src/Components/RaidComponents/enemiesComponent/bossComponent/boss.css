@@ -1,12 +1,12 @@
-.tankRoleIcon, .healerRoleIcon, .dpsRoleIcon {
-    height:20px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
+.bosses {
+    margin: 0 auto;
+    border: 1px solid gray;
+    max-width:772px;
+    display: flex;
 }
-.raider {
+.boss {
     height: 75px;
-    width: 150px;
+    width: 100%;
     margin: 2px;
     float: left;
     background-color: red;
@@ -16,12 +16,6 @@
     background-color:#555555;
     height: 100%;
     width: 100%;
-    float: left;
-}
-.incoming_heal {
-    background-color:rgba(0, 255, 0, 0.7);
-    height: 100%;
-    width: 0%;
     float: left;
 }
 .current_life_text_wrapper {
@@ -47,11 +41,17 @@
     top: 10px;
     color: whitesmoke;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    background-image: url(../../img/skull.png);
+    background-image: url(../../../../img/skull.png);
 }
 .dead img {
     top: 15px;
     height: 35px;
     left: 15px;
     position: relative;
+}
+.elite_frame {
+    position: absolute;
+    left: -45px;
+    height: 110px;
+    top: -10px;
 }
