@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-import RaidComponent from './Components/RaidComponents/RaidComponent';
-import home from './Components/home';
+import RaidComponent from './components/raidComponents/RaidComponent';
+import home from './components/home';
 
 const App: React.FC = () => {
   return (

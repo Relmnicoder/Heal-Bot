@@ -1,6 +1,6 @@
 import React from 'react'
 import Boss from './bossComponent/BossComponent'
-import Boss1Config from '../../../Raids/Ini-1/Boss1Config.json'
+import Boss1Config from '../../../raids/Ini-1/Boss1Config.json'
 
 import "./enemies.css"
 
