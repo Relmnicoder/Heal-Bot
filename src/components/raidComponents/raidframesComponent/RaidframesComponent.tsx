@@ -21,8 +21,8 @@ function Raiders() {
                 alive: true,
                 buffs: [],
                 debuffs: [],
-                maxHp: 100,
-                currentHp: 100
+                maxHp: Boss1Config.raiderConfig.tankHp,
+                currentHp: Boss1Config.raiderConfig.tankHp
             })
         }
         else if (i < Boss1Config.raiders.total_tanks + Boss1Config.raiders.total_dps) {
@@ -33,8 +33,8 @@ function Raiders() {
                 alive: true,
                 buffs: [],
                 debuffs: [],
-                maxHp: 100,
-                currentHp: 100
+                maxHp: Boss1Config.raiderConfig.dpsHp,
+                currentHp: Boss1Config.raiderConfig.dpsHp
             })
         }
         else {
@@ -45,14 +45,12 @@ function Raiders() {
                 alive: true,
                 buffs: [],
                 debuffs: [],
-                maxHp: 100,
-                currentHp: 100
+                maxHp: Boss1Config.raiderConfig.healHp,
+                currentHp: Boss1Config.raiderConfig.healHp
             })
         }
     }
-
     return Raiders
-
 }
 
 
@@ -64,8 +62,6 @@ export default function Raidframes() {
     const raiders = useSelector((state: StateStore) => state.raiders)
     const dispatch = useDispatch()
     useEffect(() => { dispatch((setRaidAction(Raiders()))) }, [dispatch])
-
-    console.log(raiders)
 
 
 

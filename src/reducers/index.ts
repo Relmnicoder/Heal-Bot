@@ -1,5 +1,4 @@
 import { combineReducers } from "redux";
-import { StateStore } from "../types";
 
 const raidReducer = (state: any = [], action: any) => {
     switch (action.type) {

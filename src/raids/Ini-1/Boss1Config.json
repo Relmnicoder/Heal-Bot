@@ -9,5 +9,10 @@
         "total_tanks": 2,
         "total_dps": 5,
         "total_healers": 3
+    },
+    "raiderConfig": {
+        "tankHp": 250,
+        "healHp": 100,
+        "dpsHp": 125
     }
 }
