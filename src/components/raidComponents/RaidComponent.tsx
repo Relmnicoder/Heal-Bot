@@ -13,7 +13,7 @@ import "./RaidComponent.css";
 export default function RaidComponent() {
 
     useEffect(() => {
-        document.title = "Raid"
+        document.title = "Raid" // turns the tab to this name. using the browser api
     })
 
     return (

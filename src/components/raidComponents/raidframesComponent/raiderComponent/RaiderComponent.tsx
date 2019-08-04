@@ -4,26 +4,22 @@ import dps from '../../../../img/dps.png'
 import healer from '../../../../img/healer.png'
 import skull from '../../../../img/skull.png'
 import "./raider.css"
+import { Raider } from '../../../../types';
 
-
-interface IRaiderProps {
-    identifier: number,
-    classRole: string,
-    alive: boolean
+interface RaiderArray {
+    raider: Raider
 }
 
-
-
-export default function Raider(props: IRaiderProps) {
-    const id = "r" + props.identifier //TODO check if i can do this differntly
-    const className = "raider " + props.classRole
-    const roleIcon = props.classRole + "RoleIcon"
+export default function RaiderComponent(props: RaiderArray) {
+    const id = "r" + props.raider.RaiderId //TODO check if i can do this differntly
+    const className = "raider " + props.raider.classRole
+    const roleIcon = props.raider.classRole + "RoleIcon"
 
     let source: string
-    if (props.classRole === "tank") {
+    if (props.raider.classRole === "tank") {
         source = tank
     }
-    else if (props.classRole === "dps") {
+    else if (props.raider.classRole === "dps") {
         source = dps
     }
     else {
@@ -32,11 +28,11 @@ export default function Raider(props: IRaiderProps) {
 
     return (
         <div id={id} className={className} >
-            <img className={roleIcon} src={source} alt={props.classRole}></img>
+            <img className={roleIcon} src={source} alt={props.raider.classRole}></img>
             <div className="current_life_text_wrapper">
                 {
-                    props.alive ?
-                        <div className="current_life_text">100</div>
+                    props.raider.alive ?
+                        <div className="current_life_text">{props.raider.currentHp}</div>
                         :
                         <div className="dead">
                             <div className="dead_text"><i>DEAD</i></div>

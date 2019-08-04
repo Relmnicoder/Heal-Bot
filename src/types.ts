@@ -12,6 +12,7 @@ export interface Raider {
     currentHp: number,
     buffs: ((arg0: number) => number)[],
     debuffs: ((arg0: number) => number)[],
+    key: number
 
 }
 
@@ -19,4 +20,8 @@ export interface Raid {
     Raiders: Raider[],
     Spells: []
     Player: {}
+}
+
+export interface StateStore {
+    raiders: Raider[]
 }
