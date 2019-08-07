@@ -5,7 +5,7 @@ export interface ClassRole {
 }
 
 export interface Raider {
-    classRole: "dps" | "tank" | "heal"
+    classRole: "dps" | "tank" | "healer"
     alive: boolean,
     RaiderId: number,
     maxHp: number,

@@ -9,3 +9,9 @@ export const setRaidAction = (givenRaider: Raider[]) => {
     })
 }
 
+export const healAction = (healAmount: number) => {
+    return ({
+        type: "heal",
+        payload: healAmount
+    })
+}

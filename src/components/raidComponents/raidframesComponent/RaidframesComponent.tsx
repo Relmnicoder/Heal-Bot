@@ -41,7 +41,7 @@ function Raiders() {
             Raiders.push({
                 key: i,
                 RaiderId: i,
-                classRole: "heal",
+                classRole: "healer",
                 alive: true,
                 buffs: [],
                 debuffs: [],
@@ -63,6 +63,7 @@ export default function Raidframes() {
     const dispatch = useDispatch()
     useEffect(() => { dispatch((setRaidAction(Raiders()))) }, [dispatch])
 
+    console.log(raiders)
 
 
 
