@@ -40,7 +40,7 @@ export default function RaidComponent() {
                 </div>
             </div>
             <div className="bottom-area">
-                <div className="cd_area">
+                <div className="cd-area">
                     <Cooldowns />
                 </div>
             </div>
