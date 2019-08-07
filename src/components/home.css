@@ -41,11 +41,3 @@ a:hover p {
     width: 100%;
     margin: 0 auto;
 }
-.raid {
-    margin: 0 auto;
-    display: table;
-    border: 1px solid gray;
-    background-color:rgba(0, 0, 0, 0.7);
-    max-width:772px;
-}
-
