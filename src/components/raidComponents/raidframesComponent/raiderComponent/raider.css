@@ -5,6 +5,7 @@
     left: 5px;
 }
 .raider {
+    flex: 1 0 19%;
     height: 75px;
     width: 150px;
     margin: 2px;

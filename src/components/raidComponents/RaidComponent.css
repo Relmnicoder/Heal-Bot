@@ -42,8 +42,9 @@ a:hover p {
     margin: 0 auto;
 }
 .raid {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
-    display: table;
     border: 1px solid gray;
     background-color:rgba(0, 0, 0, 0.7);
     max-width:772px;

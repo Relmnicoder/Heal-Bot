@@ -68,13 +68,13 @@ export default function Raidframes() {
 
 
     return (
-        <div id="ini-1">
+        <>
 
             {raiders ?
                 raiders.map((raider: Raider) => (
                     <RaiderComponent key={raider.RaiderId} raider={raider}></RaiderComponent>
                 ))
                 : ""}
-        </div>
+        </>
     )
 }
