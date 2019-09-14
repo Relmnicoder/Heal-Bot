@@ -9,17 +9,11 @@ interface IRaiderProps {
     identifier: string
 }
 
-class Boss extends React.Component<IRaiderProps, any> {
+function Boss(props:IRaiderProps){
 
-    id = "b" + this.props.identifier
-
-    // constructor(props){
-    //     super(props)
-    // }
-
-    render() {
+    let id = "b" + props.identifier
         return (
-            <div id={this.id} className="boss">
+            <div id={id} className="boss">
                 {/*<img src={eliteFrame} alt="eliteFrame" className="elite_frame"></img>*/}
                 <div className="current_life_text_wrapper">
                     <div className="current_life_text">100%</div>
@@ -34,6 +28,5 @@ class Boss extends React.Component<IRaiderProps, any> {
 
         )
     }
-}
 
 export default Boss

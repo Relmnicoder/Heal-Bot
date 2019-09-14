@@ -2,13 +2,8 @@ import React from 'react'
 import "./castbar.css"
 
 
-class Castbar extends React.Component {
+function Castbar() {
 
-    // constructor(props){
-    //     super(props)
-    // }
-
-    render() {
         return (
             <div className="castbar">
                 <div className="current_cast_bar"></div>
@@ -19,6 +14,5 @@ class Castbar extends React.Component {
 
         )
     }
-}
 
 export default Castbar

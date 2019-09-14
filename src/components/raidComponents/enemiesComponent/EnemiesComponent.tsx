@@ -5,31 +5,24 @@ import Boss1Config from '../../../raids/Ini-1/Boss1Config.json'
 import "./enemies.css"
 
 
-class Enemies extends React.Component {
+function Enemies() {
 
-    // constructor(props){
-    //     super(props)
-    // }
+    let totalBosses = Boss1Config.enemies.boss
+    let Bosses = []
 
-    totalBosses = Boss1Config.enemies.boss
-
-    render() {
-        // count number of enemies
-        let Bosses = []
-
-        for (let i = 0; i < this.totalBosses; i++) {
-            Bosses.push(
-                <Boss key={i} identifier={i.toFixed()}></Boss>
-            )
-        }
-
-        return (
-            <div className="bosses">
-                {Bosses}
-                <div className="clearer"></div>
-            </div>
+    for (let i = 0; i < totalBosses; i++) {
+        Bosses.push(
+            <Boss key={i} identifier={i.toFixed()}></Boss>
         )
     }
+
+
+    return (
+        <div className="bosses">
+            {Bosses}
+            <div className="clearer"></div>
+        </div>
+    )
 }
 
-export default Enemies
+export default Enemies;

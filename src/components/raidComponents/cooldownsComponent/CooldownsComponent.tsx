@@ -2,31 +2,23 @@ import React from 'react'
 import Spell from './spellComponent/SpellComponent'
 import "./cooldowns.css"
 
-class Cooldowns extends React.Component {
+function Cooldowns() {
 
-    // constructor(props){
-    //     super(props)
-    // }
-
-    totalSpells = 10
-
-    render() {
-
+    const totalSpells = 10
         // count number of spells
         let Spells = []
 
-        for (let i = 0; i < this.totalSpells; i++) {
+        for (let i = 0; i < totalSpells; i++) {
             Spells.push(
                 <Spell key={i} identifier={i.toFixed()}></Spell>
             )
         }
-
+        
         return (
             <div className="cooldowns">
                  {Spells}
             </div>
         )
     }
-}
 
 export default Cooldowns

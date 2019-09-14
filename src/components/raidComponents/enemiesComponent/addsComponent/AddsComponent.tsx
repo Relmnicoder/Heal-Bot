@@ -1,17 +1,10 @@
 import React from 'react'
 import "./adds.css"
 
-class Adds extends React.Component {
-
-    // constructor(props){
-    //     super(props)
-    // }
-
-    render() {
+function Adds() {
         return (
             <div></div>
         )
     }
-}
 
 export default Adds

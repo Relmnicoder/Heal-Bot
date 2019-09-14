@@ -1,13 +1,8 @@
 import React from 'react'
 import "./manabar.css"
 
-class Manabar extends React.Component {
+function Manabar() {
 
-    // constructor(props){
-    //     super(props)
-    // }
-
-    render() {
         return (
             <div className="manabar">
                 <div className="current_mana_bar"></div>
@@ -17,6 +12,5 @@ class Manabar extends React.Component {
             </div>
         )
     }
-}
 
 export default Manabar
