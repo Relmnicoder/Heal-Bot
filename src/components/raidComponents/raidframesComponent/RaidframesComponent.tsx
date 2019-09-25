@@ -34,7 +34,7 @@ function Raiders() {
                 buffs: [],
                 debuffs: [],
                 maxHp: Boss1Config.raiderConfig.dpsHp,
-                currentHp: Boss1Config.raiderConfig.dpsHp
+                currentHp: Boss1Config.raiderConfig.dpsHp 
             })
         }
         else {
@@ -61,15 +61,13 @@ export default function Raidframes() {
 
     const raiders = useSelector((state: StateStore) => state.raiders)
     const dispatch = useDispatch()
-    useEffect(() => { dispatch((setRaidAction(Raiders()))) }, [dispatch])
+    useEffect(() => { dispatch(setRaidAction(Raiders())) }, [dispatch])
+
 
     console.log(raiders)
 
-
-
     return (
         <>
-
             {raiders ?
                 raiders.map((raider: Raider) => (
                     <RaiderComponent key={raider.RaiderId} raider={raider}></RaiderComponent>

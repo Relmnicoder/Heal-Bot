@@ -11,7 +11,14 @@ export const setRaidAction = (givenRaider: Raider[]) => {
 
 export const healAction = (healAmount: number) => {
     return ({
-        type: "heal",
+        type: "HEAL",
         payload: healAmount
+    })
+}
+
+export const damageAction = (damageAmount: number) => {
+    return ({
+        type: "DAMAGE",
+        payload: damageAmount
     })
 }
