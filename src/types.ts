@@ -17,9 +17,9 @@ export interface Raider {
 }
 
 export interface Raid {
-    Raiders: Raider[],
-    Spells: []
-    Player: {}
+    Raiders?: Raider[],
+    Spells?: []
+    Player?: {}
 }
 
 export interface StateStore {

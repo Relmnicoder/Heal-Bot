@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { setRaidAction } from '../../../actions/index'
+import { setRaidAction, damageAction } from '../../../actions/index'
 
 import RaiderComponent from './raiderComponent/RaiderComponent'
 import Boss1Config from '../../../raids/Ini-1/Boss1Config.json'
@@ -68,6 +68,7 @@ export default function Raidframes() {
 
     return (
         <>
+        <button onClick={() => dispatch(damageAction(5))}></button>
             {raiders ?
                 raiders.map((raider: Raider) => (
                     <RaiderComponent key={raider.RaiderId} raider={raider}></RaiderComponent>
