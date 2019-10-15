@@ -1,0 +1,34 @@
+.timer {
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width:772px;
+    margin: 0 auto;
+    border: 1px solid gray;
+    position: relative;
+    height: 40px;
+}
+.current_timer_bar {
+    background-color:sandybrown;
+    width: 50%;
+    height:100%;
+    position: absolute;
+}
+.timer {
+    font-size: 26px;
+    color: whitesmoke;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.spell_image {
+    float: left;
+    top:25%;
+    position: relative;
+}
+.spell_name {
+    float: left;
+    top:25%;
+    position: relative;
+}
+.dbm_timer {
+    float: right;
+    top:25%;
+    position: relative;
+}

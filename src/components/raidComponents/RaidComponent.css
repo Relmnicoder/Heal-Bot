@@ -38,7 +38,9 @@ a:hover p {
     margin: 10px 0;
 }
 .raid-area {
-    width: 100%;
+    /*width: 100%;*/
+    width: 1072px;
+    padding-left: 300px;
     margin: 0 auto;
 }
 .raid {
@@ -49,4 +51,13 @@ a:hover p {
     background-color:rgba(0, 0, 0, 0.7);
     max-width:772px;
 }
+.raid { 
+    float: left;
+    margin-right:20px;
+}
+.timer-area {
+    float: left;
+    min-width: 250px;
+}
+
 

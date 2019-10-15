@@ -28,15 +28,16 @@ export default function RaidComponent() {
                     <div className="raid">
                         <Raidframes />
                     </div>
+                    <div className="timer-area">
+                        <Timers />
+                    </div>
+                    <div className="clearer"></div>
                 </div>
-                <div className="castbar_area">
+                <div className="castbar-area">
                     <Castbar />
                 </div>
-                <div className="manabar_area">
+                <div className="manabar-area">
                     <Manabar />
-                </div>
-                <div className="timer_area">
-                    <Timers />
                 </div>
             </div>
             <div className="bottom-area">
