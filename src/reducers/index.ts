@@ -10,8 +10,8 @@ const raidReducer = (raidState: Raider[] = [], action: any) => {
             ]
         case "DAMAGE":
             return raidState.map((raider, i) => {
-                if (i === 0) {
-                    return {...raider, currentHp: raider.currentHp - action.payload}
+                if (i === action.payload.id) {
+                    return {...raider, currentHp: raider.currentHp - action.payload.damageAmount}
                 }
                 return raider
             })

@@ -16,9 +16,9 @@ export const healAction = (healAmount: number) => {
     })
 }
 
-export const damageAction = (damageAmount: number) => {
+export const damageAction = (damageAmount: number, id:number) => {
     return ({
         type: "DAMAGE",
-        payload: damageAmount
+        payload: {damageAmount:damageAmount, id:id }
     })
 }

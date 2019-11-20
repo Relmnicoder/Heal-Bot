@@ -63,15 +63,17 @@ export default function Raidframes() {
     const dispatch = useDispatch()
     useEffect(() => { dispatch(setRaidAction(Raiders())) }, [dispatch])
 
+    let damage = (id:any) => dispatch(damageAction(5, id))
+
 
     console.log(raiders)
 
     return (
         <>
-        <button onClick={() => dispatch(damageAction(5))}></button>
+        {/* <button onClick={() => dispatch(damageAction(5))}></button>  */}
             {raiders ?
                 raiders.map((raider: Raider) => (
-                    <RaiderComponent key={raider.RaiderId} raider={raider}></RaiderComponent>
+                    <RaiderComponent onClick={damage} key={raider.RaiderId} raider={raider}></RaiderComponent>
                 ))
                 : ""}
         </>
