@@ -1,24 +1,18 @@
 import { Raider } from "../types";
 
-export const setRaidAction = (givenRaider: Raider[]) => {
-    return ({
-        type: "SET_RAID",
-        payload: {
-            raid: givenRaider
-        }
-    })
-}
+export const setRaidAction = (givenRaider: Raider[]) => ({
+    type: "SET_RAID",
+    payload: {
+        raid: givenRaider
+    }
+})
 
-export const healAction = (healAmount: number) => {
-    return ({
-        type: "HEAL",
-        payload: healAmount
-    })
-}
+export const healAction = (healAmount: number, id:number) => ({
+    type: "HEAL",
+    payload: { healAmount, id }
+})
 
-export const damageAction = (damageAmount: number, id:number) => {
-    return ({
-        type: "DAMAGE",
-        payload: {damageAmount:damageAmount, id:id }
-    })
-}
+export const damageAction = (damageAmount: number, id:number) => ({
+    type: "DAMAGE",
+    payload: { damageAmount, id }
+})

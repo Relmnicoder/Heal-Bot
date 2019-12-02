@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { Raider } from "../types";
+import { Raider, raidReducerAction } from "../types";
 
 const raidReducer = (raidState: Raider[] = [], action: any) => {
     switch (action.type) {
@@ -11,14 +11,18 @@ const raidReducer = (raidState: Raider[] = [], action: any) => {
         case "DAMAGE":
             return raidState.map((raider, i) => {
                 if (i === action.payload.id) {
+                    if (raider.currentHp - action.payload.damageAmount < 0)
+                        return {...raider, currentHp: 0, alive: false}
                     return { ...raider, currentHp: raider.currentHp - action.payload.damageAmount }
                 }
                 return raider
             })
-        case "HEALING":
+        case "HEAL":
             return raidState.map((raider, i) => {
-                if (i === action.payload.id) {
-                    return { ...raider, currentHp: raider.currentHp - action.payload.healAmount }
+                if (i === action.payload.id) { //TODO check if i can make it so that the reducer isnt called when nothing changes (eg: currentHp === maxHp)
+                    if (raider.currentHp + action.payload.healAmount > raider.maxHp)
+                        return {... raider, currentHp: raider.maxHp}
+                    return { ...raider, currentHp: raider.currentHp + action.payload.healAmount }
                 }
                 return raider
             })

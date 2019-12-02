@@ -25,3 +25,13 @@ export interface Raid {
 export interface StateStore {
     raiders: Raider[]
 }
+
+export interface raidReducerAction { //TODO: still scuffed
+    type: string
+    payload: {
+        id?: number,
+        damageAmount?: number,
+        healAmount?: number,
+        raid?: Raider[]
+    }
+}

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { setRaidAction, damageAction } from '../../../actions/index'
+import { setRaidAction, damageAction, healAction } from '../../../actions/index'
 
 import RaiderComponent from './raiderComponent/RaiderComponent'
 import Boss1Config from '../../../raids/Ini-1/Boss1Config.json'
@@ -8,6 +8,33 @@ import Boss1Config from '../../../raids/Ini-1/Boss1Config.json'
 import "../../../raids/Ini-1/ini-1.css"
 import "../RaidComponent.css"
 import { Raider, StateStore } from "../../../types"
+
+export default function Raidframes() {
+
+    const raiders = useSelector((state: StateStore) => state.raiders)
+    const dispatch = useDispatch()
+    useEffect(() => { dispatch(setRaidAction(Raiders())) }, [dispatch])
+
+    let damage = () => dispatch(damageAction(35, Math.floor(Math.random() * 10)))
+    let heal = (id: number) => dispatch(healAction(5, id))
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+          damage()
+        }, 1000);
+        return () => clearInterval(interval);
+      });
+
+    return (
+        <>
+            {raiders ?
+                raiders.map((raider: Raider) => (
+                    <RaiderComponent onClick={heal} key={raider.RaiderId} raider={raider}></RaiderComponent>
+                ))
+                : ""}
+        </>
+    )
+}
 
 function Raiders() {
     let totalRaiders = Object.values(Boss1Config.raiders).reduce((a, b) => a + b)
@@ -34,7 +61,7 @@ function Raiders() {
                 buffs: [],
                 debuffs: [],
                 maxHp: Boss1Config.raiderConfig.dpsHp,
-                currentHp: Boss1Config.raiderConfig.dpsHp 
+                currentHp: Boss1Config.raiderConfig.dpsHp
             })
         }
         else {
@@ -51,31 +78,4 @@ function Raiders() {
         }
     }
     return Raiders
-}
-
-
-
-
-export default function Raidframes() {
-
-
-    const raiders = useSelector((state: StateStore) => state.raiders)
-    const dispatch = useDispatch()
-    useEffect(() => { dispatch(setRaidAction(Raiders())) }, [dispatch])
-
-    let damage = (id:any) => dispatch(damageAction(5, id))
-
-
-    console.log(raiders)
-
-    return (
-        <>
-        {/* <button onClick={() => dispatch(damageAction(5))}></button>  */}
-            {raiders ?
-                raiders.map((raider: Raider) => (
-                    <RaiderComponent onClick={damage} key={raider.RaiderId} raider={raider}></RaiderComponent>
-                ))
-                : ""}
-        </>
-    )
 }
