@@ -15,7 +15,7 @@ function Cooldowns() {
     }
 
     return (
-        <div className="cooldowns">
+        <div className="cooldowns noselect">
             {Spells}
         </div>
     )

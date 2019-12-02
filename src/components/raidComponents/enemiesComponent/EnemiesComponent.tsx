@@ -18,7 +18,7 @@ function Enemies() {
 
 
     return (
-        <div className="bosses">
+        <div className="bosses noselect">
             {Bosses}
             <div className="clearer"></div>
         </div>

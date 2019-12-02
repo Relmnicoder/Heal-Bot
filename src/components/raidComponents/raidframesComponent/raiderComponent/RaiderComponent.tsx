@@ -13,7 +13,7 @@ interface RaiderArray {
 
 export default function RaiderComponent(props: RaiderArray) {
     const id = "r" + props.raider.RaiderId //TODO check if i can do this differntly
-    const className = "raider " + props.raider.classRole
+    const className = "raider " + props.raider.classRole + " noselect"
     const roleIcon = props.raider.classRole + "RoleIcon"
     const damage = props.onClick
 

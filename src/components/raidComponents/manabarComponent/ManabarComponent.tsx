@@ -4,7 +4,7 @@ import "./manabar.css"
 function Manabar() {
 
         return (
-            <div className="manabar">
+            <div className="manabar noselect">
                 <div className="current_mana_bar"></div>
                 <div className="mana_numbers">
                     95%
