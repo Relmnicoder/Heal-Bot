@@ -43,7 +43,7 @@ export default function RaiderComponent(props: RaiderArray) {
                         </div>
                 }
             </div>
-            <div className="current_life_bar"></div>
+            <div className="current_life_bar" style={{width: Math.round(props.raider.currentHp / props.raider.maxHp * 100) + "%"}}></div>
             <div className="incoming_heal"></div>
         </div>
 
