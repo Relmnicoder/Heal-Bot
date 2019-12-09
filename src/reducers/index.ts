@@ -21,7 +21,7 @@ const raidReducer = (raidState: Raider[] = [], action: any) => {
             return raidState.map((raider, i) => {
                 if (i === action.payload.id) { //TODO check if i can make it so that the reducer isnt called when nothing changes (eg: currentHp === maxHp)
                     if (raider.currentHp + action.payload.healAmount > raider.maxHp)
-                        return {... raider, currentHp: raider.maxHp}
+                        return {...raider, currentHp: raider.maxHp}
                     return { ...raider, currentHp: raider.currentHp + action.payload.healAmount }
                 }
                 return raider

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { setRaidAction, damageAction, healAction } from '../../../actions/index'
 
@@ -23,6 +23,7 @@ export default function Raidframes() {
           damage()
         }, 1000);
         return () => clearInterval(interval);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       },[]);
 
 
