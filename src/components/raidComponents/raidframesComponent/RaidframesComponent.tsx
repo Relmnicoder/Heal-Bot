@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { setRaidAction, damageAction, healAction } from '../../../actions/index'
 
@@ -23,7 +23,8 @@ export default function Raidframes() {
           damage()
         }, 1000);
         return () => clearInterval(interval);
-      });
+      },[]);
+
 
     return (
         <>
