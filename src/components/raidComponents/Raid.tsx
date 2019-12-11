@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react'
-import Raidframes from './raidframesComponent/RaidframesComponent';
-import Enemies from './enemiesComponent/EnemiesComponent';
-import Castbar from './castbarComponent/CastbarComponent';
-import Manabar from './manabarComponent/ManabarComponent';
+import Raidframes from './raidframes/Raidframes';
+import Enemies from './enemies/Enemies';
+import Castbar from './castbar/CastbarComponent';
+import Manabar from './manabar/Manabar';
 import Timers from './timerComponent/TimerComponent';
-import Cooldowns from './cooldownsComponent/CooldownsComponent';
+import Cooldowns from './cooldowns/Cooldowns';
 
-import "./RaidComponent.css";
+import "./Raid.css";
 
 // import { Spell1 } from './SpellComponents/SpellComponent';
 
-export default function RaidComponent() {
+export default function Raid() {
 
     useEffect(() => {
         document.title = "Raid" // turns the tab to this name. using the browser api

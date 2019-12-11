@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-import RaidComponent from './components/raidComponents/RaidComponent';
+import Raid from './components/raidComponents/Raid';
 import home from './components/home';
 
 const App: React.FC = () => {
@@ -9,7 +9,7 @@ const App: React.FC = () => {
       <div>
         <Switch>
           <Route path="/" component={home} exact />
-          <Route path="/HealBot" component={RaidComponent} />
+          <Route path="/HealBot" component={Raid} />
         </Switch>
       </div>
     </Router>

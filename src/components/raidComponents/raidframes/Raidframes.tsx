@@ -2,11 +2,11 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { setRaidAction, damageAction, healAction } from '../../../actions/index'
 
-import RaiderComponent from './raiderComponent/RaiderComponent'
+import RaiderComponent from './raider/Raider'
 import Boss1Config from '../../../raids/Ini-1/Boss1Config.json'
 
 import "../../../raids/Ini-1/ini-1.css"
-import "../RaidComponent.css"
+import "../Raid.css"
 import { Raider, StateStore } from "../../../types"
 
 export default function Raidframes() {

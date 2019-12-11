@@ -1,5 +1,5 @@
 import React from 'react'
-import Spell from './spellComponent/SpellComponent'
+import Spell from './spellComponent/Spell'
 import "./cooldowns.css"
 
 function Cooldowns() {
