@@ -5,7 +5,6 @@ const raidReducer = (raidState: Raider[] = [], action: any) => {
     switch (action.type) {
         case "SET_RAID":
             return [
-                ...raidState,
                 ...action.payload.raid //destructers the array of raiders that was given.
             ]
         case "DAMAGE":

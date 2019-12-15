@@ -45,7 +45,6 @@ export default function Raid() {
                     <Cooldowns />
                 </div>
             </div>
-            {/* <button onClick={Spell1}></button> */}
         </div>
     )
 }

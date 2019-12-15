@@ -13,6 +13,8 @@ export default function Raidframes() {
 
     const raiders = useSelector((state: StateStore) => state.raiders)
     const dispatch = useDispatch()
+
+
     useEffect(() => { dispatch(setRaidAction(Raiders())) }, [dispatch])
 
     let damage = () => dispatch(damageAction(35, Math.floor(Math.random() * 10)))
@@ -20,11 +22,11 @@ export default function Raidframes() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-          damage()
+            damage()
         }, 1000);
         return () => clearInterval(interval);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-      },[]);
+    }, []);
 
 
     return (
