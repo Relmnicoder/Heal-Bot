@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import Raidframes from './raidframes/Raidframes';
-import Enemies from './enemies/Enemies';
-import Castbar from './castbar/CastbarComponent';
-import Manabar from './manabar/Manabar';
+import Enemies from './enemyComponents/Enemies';
+import Castbar from './playerComponents/castbar/CastbarComponent';
+import Manabar from './playerComponents/manabar/Manabar';
 import Timers from './timerComponent/TimerComponent';
-import Cooldowns from './cooldowns/Cooldowns';
+import Cooldowns from './playerComponents/cooldowns/Cooldowns';
 
 import "./Raid.css";
 

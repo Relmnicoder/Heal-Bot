@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { setRaidAction, damageAction, healAction } from '../../../actions/index'
+import { setRaid, damage, heal } from '../../../actions/index'
 
 import RaiderComponent from './raider/Raider'
 import Boss1Config from '../../../raids/Ini-1/Boss1Config.json'
@@ -15,14 +15,14 @@ export default function Raidframes() {
     const dispatch = useDispatch()
 
 
-    useEffect(() => { dispatch(setRaidAction(Raiders())) }, [dispatch])
+    useEffect(() => { dispatch(setRaid(Raiders())) }, [dispatch])
 
-    let damage = () => dispatch(damageAction(35, Math.floor(Math.random() * 10)))
-    let heal = (id: number) => dispatch(healAction(5, id))
+    let fightStart = () => dispatch(damage(35, Math.floor(Math.random() * 10)))
+    let healTarget = (id: number) => dispatch(heal(5, id))
 
     useEffect(() => {
         const interval = setInterval(() => {
-            damage()
+            fightStart()
         }, 1000);
         return () => clearInterval(interval);
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -33,7 +33,7 @@ export default function Raidframes() {
         <>
             {raiders ?
                 raiders.map((raider: Raider) => (
-                    <RaiderComponent onClick={heal} key={raider.RaiderId} raider={raider}></RaiderComponent>
+                    <RaiderComponent onClick={healTarget} key={raider.RaiderId} raider={raider}></RaiderComponent>
                 ))
                 : ""}
         </>
