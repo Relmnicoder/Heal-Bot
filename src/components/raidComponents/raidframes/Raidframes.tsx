@@ -17,16 +17,7 @@ export default function Raidframes() {
 
     useEffect(() => { dispatch(setRaid(Raiders())) }, [dispatch])
 
-    let fightStart = () => dispatch(damage(35, Math.floor(Math.random() * 10)))
     let healTarget = (id: number) => dispatch(heal(5, id))
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            fightStart()
-        }, 1000);
-        return () => clearInterval(interval);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
 
 
     return (
