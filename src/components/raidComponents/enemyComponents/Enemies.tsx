@@ -3,12 +3,17 @@ import Boss from './boss/Boss'
 import Boss1Config from '../../../raids/Ini-1/Boss1Config.json'
 
 import "./enemies.css"
-import { useSelector, useDispatch } from 'react-redux'
-import { StateStore } from '../../../types'
+import { useDispatch } from 'react-redux'
 import { damage } from '../../../actions'
+import { Raider } from '../../../types'
 
 
-function Enemies() {
+interface enemyProps {
+    raiders: Raider[]
+}
+
+const Enemies: React.FC<enemyProps> = props => {
+    const dispatch = useDispatch()
 
     let totalBosses = Boss1Config.enemies.boss
     let Bosses = []
@@ -19,8 +24,12 @@ function Enemies() {
         )
     }
 
-    const raiders = useSelector((state: StateStore) => state.raiders)
-    const dispatch = useDispatch()
+    let LiveRaiders = props.raiders.map(raider => {
+        if (raider.alive)
+            return raider.RaiderId
+        return
+    });
+    console.log(LiveRaiders)
 
     let fightStart = () => dispatch(damage(35, Math.floor(Math.random() * 10)))
 

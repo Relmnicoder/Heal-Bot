@@ -6,21 +6,32 @@ import Manabar from './playerComponents/manabar/Manabar';
 import Timers from './timerComponent/TimerComponent';
 import Cooldowns from './playerComponents/cooldowns/Cooldowns';
 
+import Boss1Config from '../../raids/Ini-1/Boss1Config.json'
+import { Raider, StateStore } from "../../types"
+import { setRaid } from '../../actions/index'
+
+
+
 import "./Raid.css";
+import { useDispatch, useSelector } from 'react-redux';
 
 // import { Spell1 } from './SpellComponents/SpellComponent';
 
 export default function Raid() {
-
+    const dispatch = useDispatch()
+    useEffect(() => { dispatch(setRaid(Raiders())) }, [dispatch])
     useEffect(() => {
         document.title = "Raid" // turns the tab to this name. using the browser api
     })
+
+    const raiders = useSelector((state: StateStore) => state.raiders)
+
 
     return (
         <div className="encounter">
             <div className="top-area">
                 <div className="boss-area">
-                    <Enemies />
+                    <Enemies raiders={raiders} />
                 </div>
             </div>
             <div className="middle-area">
@@ -47,4 +58,48 @@ export default function Raid() {
             </div>
         </div>
     )
+}
+
+function Raiders() {
+    let totalRaiders = Object.values(Boss1Config.raiders).reduce((a, b) => a + b)
+    let Raiders: Raider[] = []
+    for (let i = 0; i < totalRaiders; i++) {
+        if (i < Boss1Config.raiders.total_tanks) {
+            Raiders.push({
+                key: i,
+                RaiderId: i,
+                classRole: "tank",
+                alive: true,
+                buffs: [],
+                debuffs: [],
+                maxHp: Boss1Config.raiderConfig.tankHp,
+                currentHp: Boss1Config.raiderConfig.tankHp
+            })
+        }
+        else if (i < Boss1Config.raiders.total_tanks + Boss1Config.raiders.total_dps) {
+            Raiders.push({
+                key: i,
+                RaiderId: i,
+                classRole: "dps",
+                alive: true,
+                buffs: [],
+                debuffs: [],
+                maxHp: Boss1Config.raiderConfig.dpsHp,
+                currentHp: Boss1Config.raiderConfig.dpsHp
+            })
+        }
+        else {
+            Raiders.push({
+                key: i,
+                RaiderId: i,
+                classRole: "healer",
+                alive: true,
+                buffs: [],
+                debuffs: [],
+                maxHp: Boss1Config.raiderConfig.healHp,
+                currentHp: Boss1Config.raiderConfig.healHp
+            })
+        }
+    }
+    return Raiders
 }
