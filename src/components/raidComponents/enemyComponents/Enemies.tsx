@@ -13,6 +13,7 @@ interface enemyProps {
 
 const Enemies: React.FC<enemyProps> = props => {
   const [RandomInt, setRandomInt] = useState(0);
+  const [LiveRaiders, setLiveRaiders] = useState();
   const dispatch = useDispatch();
 
   let totalBosses = Boss1Config.enemies.boss;
@@ -22,35 +23,37 @@ const Enemies: React.FC<enemyProps> = props => {
     Bosses.push(<Boss key={i} identifier={i.toFixed()}></Boss>);
   }
 
-  let LiveRaiders = props.raiders.filter(raider => {
-    return raider.alive;
-  });
+  useEffect(() => {
+    setLiveRaiders(
+      props.raiders.filter(raider => {
+        return raider.alive;
+      })
+    );
+    console.log(LiveRaiders);
+    if (LiveRaiders) {
+      setRandomInt(
+        LiveRaiders[Math.floor(Math.random() * LiveRaiders.length)]?.RaiderId
+      );
+      console.log(RandomInt);
+    }
+  }, [props]);
 
-  console.log(LiveRaiders[Math.floor(Math.random() * LiveRaiders.length)]);
-  let currentRaider =
-    LiveRaiders[Math.floor(Math.random() * LiveRaiders.length)];
-  console.log(currentRaider?.RaiderId);
+  //   let LiveRaiders = props.raiders.filter(raider => {
+  //     return raider.alive;
+  //   });
 
-  let fightStart = () => dispatch(damage(35, Math.floor(Math.random() * 10)));
-  //   let fightStart = () =>
-  //     dispatch(
-  //       damage(
-  //         35,
-  //         LiveRaiders
-  //           ? LiveRaiders[Math.floor(Math.random() * LiveRaiders.length)].RaiderId
-  //           : 10
-  //       )
-  //     );
+  //   let fightStart = () => dispatch(damage(35, Math.floor(Math.random() * 10)));
+  //   console.log(RandomInt);
+
+  let fightStart = () => dispatch(damage(35, RandomInt));
 
   useEffect(() => {
-    if (LiveRaiders) {
-      const interval = setInterval(() => {
-        fightStart();
-      }, 1000);
-      return () => clearInterval(interval);
-    }
+    const interval = setInterval(() => {
+      fightStart();
+    }, 1000);
+    return () => clearInterval(interval);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [fightStart]);
 
   return (
     <div className="bosses noselect">
