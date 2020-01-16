@@ -15,7 +15,7 @@ export default function RaiderComponent(props: RaiderArray) {
     const id = "r" + props.raider.RaiderId //TODO check if i can do this differntly
     const className = "raider " + props.raider.classRole + " noselect"
     const roleIcon = props.raider.classRole + "RoleIcon"
-    const damage = props.onClick
+    const healing = props.onClick
 
 
     let source: string
@@ -30,7 +30,7 @@ export default function RaiderComponent(props: RaiderArray) {
     }
 
     return (
-        <div id={id} className={className} onClick={()=>damage(props.raider.RaiderId)} >
+        <div id={id} className={className} onClick={()=>healing(props.raider.RaiderId)} >
             <img className={roleIcon} src={source} alt={props.raider.classRole}></img>
             <div className="current_life_text_wrapper">
                 {

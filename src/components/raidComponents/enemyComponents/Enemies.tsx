@@ -12,6 +12,7 @@ interface enemyProps {
 }
 
 const Enemies: React.FC<enemyProps> = props => {
+  //component start
   const [RandomInt, setRandomInt] = useState(0);
   const [LiveRaiders, setLiveRaiders] = useState();
   const dispatch = useDispatch();
