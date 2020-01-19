@@ -31,9 +31,14 @@
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .dead {
-    display: none;
+    display: block;
     position: relative;
     left: -50%;
+    background-color: black;
+    pointer-events: none;
+}
+.boss .dead {
+    display: none;
 }
 .dead_text {
     position: relative;
