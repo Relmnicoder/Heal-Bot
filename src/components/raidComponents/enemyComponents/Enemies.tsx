@@ -49,10 +49,12 @@ const Enemies: React.FC<enemyProps> = props => {
   let fightStart = () => dispatch(damage(35, RandomInt));
 
   useEffect(() => {
+    if (LiveRaiders?.length > 0){
     const interval = setInterval(() => {
       fightStart();
     }, 1000);
     return () => clearInterval(interval);
+  }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fightStart]);
 
