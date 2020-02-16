@@ -8,7 +8,7 @@ import Cooldowns from './playerComponents/cooldowns/Cooldowns';
 import RaidInit from "./gameComponents/RaidInit";
 
 import Boss1Config from '../../raids/Ini-1/Boss1Config.json'
-import { Raider, StateStore } from "../../types"
+import { Raider } from "../../types"
 import { setRaid } from '../../actions/index'
 
 
