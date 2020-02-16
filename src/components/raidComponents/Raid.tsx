@@ -5,6 +5,7 @@ import Castbar from './playerComponents/castbar/CastbarComponent';
 import Manabar from './playerComponents/manabar/Manabar';
 import Timers from './timerComponent/TimerComponent';
 import Cooldowns from './playerComponents/cooldowns/Cooldowns';
+import RaidInit from "./gameComponents/RaidInit";
 
 import Boss1Config from '../../raids/Ini-1/Boss1Config.json'
 import { Raider, StateStore } from "../../types"
@@ -13,7 +14,7 @@ import { setRaid } from '../../actions/index'
 
 
 import "./Raid.css";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 // import { Spell1 } from './SpellComponents/SpellComponent';
 
@@ -24,14 +25,14 @@ export default function Raid() {
         document.title = "Raid" // turns the tab to this name. using the browser api
     })
 
-    const raiders = useSelector((state: StateStore) => state.raiders)
 
 
     return (
         <div className="encounter">
+            <RaidInit />
             <div className="top-area">
                 <div className="boss-area">
-                    <Enemies raiders={raiders} />
+                    <Enemies />
                 </div>
             </div>
             <div className="middle-area">
