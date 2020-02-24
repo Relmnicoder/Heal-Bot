@@ -9,7 +9,7 @@ import RaidInit from "./gameComponents/RaidInit";
 
 import Boss1Config from '../../raids/Ini-1/Boss1Config.json'
 import { Raider } from "../../types"
-import { setRaid } from '../../actions/index'
+import { setRaid } from '../../actions/raidActions'
 
 
 

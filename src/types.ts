@@ -16,13 +16,19 @@ export interface Raider {
 
 }
 
+export interface Spell {
+    castable: boolean,
+    spellName: string,
+    spellId?: number
+}
+
 export interface Raid {
     Raiders?: Raider[],
-    Spells?: []
     Player?: {}
 }
 
 export interface StateStore {
+    spellList: Spell[]
     raiders: Raider[]
 }
 
