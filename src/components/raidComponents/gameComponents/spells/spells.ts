@@ -1,13 +1,15 @@
 // import { useDispatch } from "react-redux"
 import { heal } from "../../../../actions/raidActions"
 import { spellCast } from "../../../../actions/spellActions"
-import { Dispatch } from "react"
-// const dispatch = useDispatch()
+import { store } from "../../../.."
+export class SpellBook {
 
-export const basicHeal = (dispatch:Dispatch<any>, id:number) => {
-    setTimeout(()=> {
-        dispatch(heal(5, id))
-        dispatch(spellCast(id))
+    public basicHeal = ( id:number) => {
+        setTimeout(()=> {
+            store.dispatch(heal(5, id))
+            store.dispatch(spellCast(id))
+    
+        }, 1000)
+}
 
-    }, 1000)
 }
