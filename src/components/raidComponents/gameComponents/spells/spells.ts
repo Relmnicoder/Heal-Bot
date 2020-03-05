@@ -1,9 +1,13 @@
-import { useDispatch } from "react-redux"
+// import { useDispatch } from "react-redux"
 import { heal } from "../../../../actions/raidActions"
-import { casted } from "../../../../actions/spellActions"
-const dispatch = useDispatch() // THIS IS A HOOK. FIND A WAY TO DISPATCH WITHOUT HOOKS FUCK
+import { spellCast } from "../../../../actions/spellActions"
+import { Dispatch } from "react"
+// const dispatch = useDispatch()
 
-export const basicHeal = (id:number) => {
-    dispatch(heal(5, id))
-    dispatch(casted(id))
+export const basicHeal = (dispatch:Dispatch<any>, id:number) => {
+    setTimeout(()=> {
+        dispatch(heal(5, id))
+        dispatch(spellCast(id))
+
+    }, 1000)
 }

@@ -15,7 +15,7 @@ export default function Raidframes() {
     const dispatch = useDispatch()
 
 
-    let healTarget = (id: number) => basicHeal(id)
+    let healTarget = (id: number) => basicHeal(dispatch, id)
 
 
     return (
