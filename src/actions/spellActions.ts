@@ -7,9 +7,25 @@ export const setSpellList = (spells: Spell[]) => ({
     }
 })
 
-export const spellCast = (id:number) => ({
+export const spellCast = (id: number) => ({
     type: "CAST",
     payload: {
         spellID: id,
+    }
+})
+
+export const spellBuff = (spellId: number, targetId: number) => ({
+    type: "BUFF",
+    payload: {
+        buff: spellId,
+        id: targetId
+    }
+})
+
+export const removeBuff = (spellId: number, targetId: number) => ({
+    type: "REMOVE_BUFF",
+    payload: {
+        buff: spellId,
+        id: targetId
     }
 })

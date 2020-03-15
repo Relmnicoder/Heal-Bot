@@ -36,7 +36,8 @@ export const raidReducer = (raidState: Raider[] = [], action: any) => {
     case "BUFF":
       return raidState.map((raider, i) => {
         if (i === action.payload.id) {
-          return { ...raider, buffs: [...raider.buffs, action.payload.buff] };
+          if (!raider.buffs.includes(action.payload.buff))
+            return { ...raider, buffs: [...raider.buffs, action.payload.buff] };
         }
         return raider;
       });

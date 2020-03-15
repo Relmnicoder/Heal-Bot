@@ -2,70 +2,73 @@
 /* CSS Document */
 
 body {
-	margin:0;
-	padding:0;
-	/*font-family:arial;*/
-	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background-size: 100% auto;
-	background-color: #cccccc;
-	font-size:14px;
-	line-height:20px;
+  margin: 0;
+  padding: 0;
+  /*font-family:arial;*/
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-size: 100% auto;
+  background-color: #cccccc;
+  font-size: 14px;
+  line-height: 20px;
 }
 p {
-	margin:0;
+  margin: 0;
 }
 a {
-	color:dodgerblue;
+  color: dodgerblue;
 }
 div {
-    display: block;
+  display: block;
 }
 a:hover p {
-	text-decoration:underline;
+  text-decoration: underline;
 }
 .clearer {
-	clear:both;
+  clear: both;
 }
 .boss-area {
-    width: 100%;
-    padding: 10px 0;
-    margin: 0 auto;
-    border-bottom: 1px solid gray;
-    background-color:rgba(0, 0, 0, 0.7);
-    text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0 auto;
+  border-bottom: 1px solid gray;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
 }
 .middle-area {
-    margin: 10px 0;
-}
-.raid-area {
-    /*width: 100%;*/
-    width: 1072px;
-    padding-left: 300px;
-    margin: 0 auto;
-}
-.raid {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    border: 1px solid gray;
-    background-color:rgba(0, 0, 0, 0.7);
-    max-width:772px;
-}
-.raid { 
-    float: left;
-    margin-right:20px;
-}
-.timer-area {
-    float: left;
-    min-width: 250px;
-}
-.noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Old versions of Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome, Opera and Firefox */
+  margin: 10px 0;
 }
 
+.castbar-area {
+  padding-top: 15px;
+}
+.raid-area {
+  /*width: 100%;*/
+  width: 1072px;
+  padding-left: 300px;
+  margin: 0 auto;
+}
+.raid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  border: 1px solid gray;
+  background-color: rgba(0, 0, 0, 0.7);
+  max-width: 772px;
+}
+.raid {
+  float: left;
+  margin-right: 20px;
+}
+.timer-area {
+  float: left;
+  min-width: 250px;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+}
