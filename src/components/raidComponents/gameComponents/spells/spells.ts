@@ -4,9 +4,9 @@ import { spellCast, spellBuff, removeBuff } from "../../../../actions/spellActio
 import { store } from "../../../.."
 export class SpellBook {
 
-    public basicHeal = (targetId: number) => {
-        let flashHeal = new Heal(1, 20, 1500)
-        flashHeal.heal(targetId)
+    public flashHeal = (targetId: number) => {
+        let basicHeal = new CastingSpell(1, 20, 1500)
+        return basicHeal.heal(targetId)
     }
 
     public basicHot = (targetId: number) => {
@@ -44,6 +44,6 @@ export class CastingSpell {
     heal(targetId: number) {
         setTimeout(() => {
             store.dispatch(heal(5, targetId))
-        }, 1000)
+        }, this.castTime)
     }
 }
