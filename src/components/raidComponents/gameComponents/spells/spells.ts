@@ -2,33 +2,22 @@
 import { heal } from "../../../../actions/raidActions"
 import { spellCast, spellBuff, removeBuff } from "../../../../actions/spellActions"
 import { store } from "../../../.."
+
 export class SpellBook {
 
     public flashHeal = (targetId: number) => {
-        let basicHeal = new CastingSpell(1, 20, 1500)
-        return basicHeal.heal(targetId)
+        let Heal = new CastingSpell(1, 20, 1500);
+        return Heal.heal(targetId);
     }
 
     public basicHot = (targetId: number) => {
-        let spellId = 1
-        let healAmount = 5
-
-
-        store.dispatch(spellBuff(spellId, targetId))
-
-        let interval = setInterval(() => {
-            store.dispatch(heal(healAmount, targetId))
-        }, 1000)
-
-        setTimeout(() => {
-            clearInterval(interval)
-            store.dispatch(removeBuff(spellId, targetId))
-        }, 5000)
+        const Heal = new CastingSpell(2, 20, 0);
+        return Heal.hot(targetId, 1500)
     }
 
 }
 
-export class CastingSpell {
+class CastingSpell {
     spellId: number;
     amount: number;
     castTime: number;
@@ -44,6 +33,12 @@ export class CastingSpell {
     heal(targetId: number) {
         setTimeout(() => {
             store.dispatch(heal(5, targetId))
+        }, this.castTime)
+    }
+    hot(targetId: number, duration: number) {
+
+        setTimeout(() => {
+            store.dispatch(spellBuff(this.spellId, duration, targetId))
         }, this.castTime)
     }
 }

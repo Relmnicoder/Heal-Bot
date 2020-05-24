@@ -2,11 +2,15 @@ import { Raider } from "../types";
 
 export const raidReducer = (raidState: Raider[] = [], action: any) => {
   switch (action.type) {
+
     case "SET_RAID":
+
       return [
         ...action.payload.raid
       ];
+
     case "DAMAGE":
+
       return raidState.map((raider, i) => {
         if (i === action.payload.id) {
           if (raider.currentHp - action.payload.damageAmount < 0)
@@ -18,7 +22,9 @@ export const raidReducer = (raidState: Raider[] = [], action: any) => {
         }
         return raider;
       });
+
     case "HEAL":
+
       return raidState.map((raider, i) => {
         if (i === action.payload.id) {
           if (raider.alive) {
@@ -33,7 +39,9 @@ export const raidReducer = (raidState: Raider[] = [], action: any) => {
         }
         return raider;
       });
+
     case "BUFF":
+
       return raidState.map((raider, i) => {
         if (i === action.payload.id) {
           if (!raider.buffs.includes(action.payload.buff))
@@ -41,7 +49,9 @@ export const raidReducer = (raidState: Raider[] = [], action: any) => {
         }
         return raider;
       });
+
     case "DEBUFF":
+
       return raidState.map((raider, i) => {
         if (i === action.payload.id) {
           return {
@@ -53,6 +63,7 @@ export const raidReducer = (raidState: Raider[] = [], action: any) => {
       });
 
     case "TOGGLE_LIFE":
+
       return raidState.map((raider, i) => {
         if (i === action.payload.id) {
           return { ...raider, alive: !raider.alive };

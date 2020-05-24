@@ -14,10 +14,10 @@ export const spellCast = (id: number) => ({
     }
 })
 
-export const spellBuff = (spellId: number, targetId: number) => ({
+export const spellBuff = (spellId: number,duration: number, targetId: number) => ({
     type: "BUFF",
     payload: {
-        buff: spellId,
+        buff: {spellId, duration},
         id: targetId
     }
 })

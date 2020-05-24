@@ -13,7 +13,7 @@ export default function Raidframes() {
   const ss = new SpellBook();
   const raiders = useSelector((state: StateStore) => state.raiders);
 
-  let healTarget = (id: number) => ss.flashHeal(id);
+  let healTarget = (id: number) => ss.basicHot(id);
 
   return (
     <>
