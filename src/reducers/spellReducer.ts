@@ -6,7 +6,7 @@ export const spellReducer = (spellList: Spell[] = [], action: any) => {
       return [...action.payload.spellList];
     case "CAST":
       return spellList.map((singleSpell: Spell) => {
-        return { ...singleSpell, castable: false };
+        return { ...singleSpell };
       });
     default:
       return spellList;

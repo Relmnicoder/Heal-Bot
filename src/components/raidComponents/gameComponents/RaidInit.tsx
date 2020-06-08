@@ -43,7 +43,7 @@ function RaidInit() {
 export default RaidInit;
 
 const Spells = () => {
-  let SpellList: Spell[] = [{castable: true, spellName: "basic Heal", }];
+  let SpellList: Spell[] = [{spellName: "basic Heal", }];
 
   return SpellList;
 };

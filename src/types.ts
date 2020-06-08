@@ -17,7 +17,6 @@ export interface Raider {
 }
 
 export interface Spell {
-    castable: boolean,
     spellName: string,
     spellId?: number
 }
