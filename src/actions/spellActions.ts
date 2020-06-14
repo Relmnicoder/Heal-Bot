@@ -18,7 +18,7 @@ export const spellBuff = (spellId: number,duration: number, targetId: number) =>
     type: "BUFF",
     payload: {
         buff: {spellId},
-        id: targetId
+        target: targetId
     }
 })
 
