@@ -1,7 +1,7 @@
 // import { useDispatch } from "react-redux"
-import { heal } from "../../../../actions/raidActions"
-import { spellCast, spellBuff, removeBuff } from "../../../../actions/spellActions"
-import { store } from "../../../.."
+import { heal } from "../actions/raidActions"
+import { spellCast, spellBuff, removeBuff } from "../actions/spellActions"
+import { store } from ".."
 
 export class SpellBook {
 
